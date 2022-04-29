@@ -41,21 +41,3 @@ CREATE TABLE forms (
     INDEX `payment_id` (`payment_id`),
     INDEX `deleted_at` (`deleted_at`)
 );
-
-
-ALTER TABLE forms DROP COLUMN updated_at;
-
-
-CREATE TABLE `test` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `number` INT(10),
-  PRIMARY KEY(`id`)
-);
-
-INSERT INTO test (number) VALUES ('Реклама и Маркетинг');
-
-Румянцев Николай +79149327740 rumyancev@mail.com
-Зверева Ульяна +79143293070 zvereva@mail.com
-Егорова Ксения +79144512601 egorova@mail.com
-Сергеева Арина +79142736939 sergeeva@mail.com
-Демидова Диана +79146164674 demidova@mail.com
