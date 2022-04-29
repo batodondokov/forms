@@ -112,12 +112,7 @@ class Form{
             {
                 if ($id === $item->id)
                 {                   
-                    foreach ($item as $row){
-                        str_replace("exist","deleted",$row);
-                        var_dump($row);
-                        echo ('</br>');
-                    }
-                    // array_splice($items, $index, 1); 
+                    array_splice($items, $index, 1); 
                     break;
                 }
             }
