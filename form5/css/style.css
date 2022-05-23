@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto',sans-serif;
+}
+.form{
+    width: 430px;
+    height: 646px;
+    border: 2px solid #999999;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+.form-header{
+    height: 45px;
+    border: 2px solid #999999;
+    background-color: #E3E3E3;
+    padding-bottom: 13px;
+    padding-top: 13px;
+}
+.form-title{
+    font-size: 14px;
+    text-align: center;
+}
+.form-field{
+    height: 60px;
+    margin-top: 15px;
+}
+label{
+    height: 19px;
+    font-size: 14px;
+    text-align: left;
+}
+input{
+    height: 36px;
+    width: 100%;
+    border: 2px solid #999999;
+    margin-top: 5px;
+    padding-left: 15px;
+    padding-top: 9px;
+    padding-bottom: 8px;
+}
+select{
+    height: 36px;
+    width: 100%;
+    border: 2px solid #999999;
+    margin-top: 5px;
+    padding-left: 15px;
+    padding-top: 9px;
+    padding-bottom: 8px;
+}
+.form-field-checkbox{
+    height: 39px;
+    margin-top: 15px;
+}
+input[type="checkbox"]{
+    height: 14px;
+    width: 14px;
+    border: 2px solid #999999;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.form-footer{
+    height: 80px;
+    border: 2px solid #999999;
+    background-color: #E3E3E3;
+    padding-bottom: 22px;
+    padding-top: 22px;
+    margin-top: 15px;
+}
+.button{
+    text-align: center;
+}
+button{
+    height: 36px;
+    width: 98px;
+    border: 2px solid #999999;
+    border-radius: 5px;
+    background-color: #FFFF00;
+    font-size: 14px;
+}
+.errors{
+    width: 430px;
+    border: 2px solid #999999;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+}
+.succsess{
+    width: 430px;
+    height: 80px;
+    border: 2px solid #999999;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 25px;
+    padding-top: 26px;
+    text-align: center;
+    font-size: 22px;
+}
