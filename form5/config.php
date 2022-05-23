@@ -2,7 +2,7 @@
 
 return[
     'db_host' => '127.0.0.1',
-    'db_name' => 'newform',
-    'db_user'=> 'root',
-    'db_password' => 'asdasd123',
+    'db_name' => 'batodz49',
+    'db_user'=> 'batodz49',
+    'db_password' => 'itR3DIEJ',
 ];
