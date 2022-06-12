@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr 1180px 1fr;
+    grid-template-areas: 
+        ". header ."
+        ". content ."
+        "footer footer footer";
+    grid-template-rows: 100px 1fr 100px;
+    grid-column-gap: 0px;
+    align-items: center;
+    font-family: 'Inter',sans-serif;
+    color: black;
+    margin: 0;
+}
+.page-header{
+    grid-area: header;
+}
+.page-header-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #614BF2;
+}
+.main-content{
+    grid-area: content;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    justify-self: center;
+    min-height: 510px;
+}
+.userUpdate-block{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "userUpdate-title"
+        "userUpdate-go-back"
+        "userUpdate-errors"
+        "userUpdate-form";
+    grid-template-rows: repeat (auto-fit, minmax(1px, 1fr));
+    grid-row-gap: 15px;
+    justify-self: center;
+    min-width: 550px;
+}
+.userUpdate-title{
+    grid-area: userUpdate-title;
+    margin: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+.userUpdate-form{
+    grid-area: userUpdate-form;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "userUpdate-form-input-name"
+        "userUpdate-form-input-last_name"
+        "userUpdate-form-input-email"
+        "userUpdate-form-input-login"
+        "userUpdate-form-input-current_password"
+        "userUpdate-form-input-new_password"
+        "userUpdate-form-input-new_password_confirm"
+        "userUpdate-form-button-block";
+    grid-template-rows: repeat (auto-fit, minmax(36px, 1fr));
+    grid-row-gap: 15px;
+    justify-self: center;
+}
+.userUpdate-form-label{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+.userUpdate-form-label-info{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #696969;
+}
+.userUpdate-form-input-name{
+    grid-area: userUpdate-form-input-name;
+    width: 550px;
+    height: 75px;
+}
+.userUpdate-form-input-last_name{
+    grid-area: userUpdate-form-input-last_name;
+    width: 550px;
+    height: 75px;
+}
+.userUpdate-form-input-email{
+    grid-area: userUpdate-form-input-email;
+    width: 550px;
+    height: 58px;
+}
+.userUpdate-form-input-login{
+    grid-area: userUpdate-form-input-login;
+    width: 550px;
+    height: 75px;
+}
+.userUpdate-form-input-current_password{
+    grid-area: userUpdate-form-input-current_password;
+    width: 550px;
+    height: 58px;
+}
+.userUpdate-form-input-new_password{
+    grid-area: userUpdate-form-input-new_password;
+    width: 550px;
+    height: 75px;
+}
+.userUpdate-form-input-new_password_confirm{
+    grid-area: userUpdate-form-input-new_password_confirm;
+    width: 550px;
+    height: 58px;
+}
+.userUpdate-form-button-block{
+    grid-area: userUpdate-form-button-block;
+    width: 150px;
+    height: 36px;
+    justify-self: center;
+}
+.userUpdate-form-button{
+    width: 150px;
+    height: 36px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    background: #614BF2;
+    border: 2px solid #000000;
+    cursor: pointer;
+}
+.userUpdate-form-input{
+    width: 550px;
+    height: 36px;
+    border: 2px solid #000000;
+    padding: 0 15px;
+}
+.userUpdate-go-back{
+    grid-area: userUpdate-go-back;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #614BF2;
+}
+.page-footer{
+    grid-area: footer;
+    justify-self: center;
+}

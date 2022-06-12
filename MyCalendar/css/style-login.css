@@ -1,0 +1,126 @@
+/*Cтили для главной страницы*/
+*{
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr 1180px 1fr;
+    grid-template-areas: 
+        ". header ."
+        ". content ."
+        "footer footer footer";
+    grid-template-rows: 100px 1fr 100px;
+    grid-column-gap: 0px;
+    align-items: center;
+    font-family: 'Inter',sans-serif;
+    color: black;
+    margin: 0;
+}
+.page-header{
+    grid-area: header;
+}
+.page-header-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #614BF2;
+}
+.main-content{
+    grid-area: content;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+  	justify-self: center;
+  	min-height: 510px;
+}
+.login-block{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "login-title"
+        "login-go-registration"
+        "login-errors"
+        "login-form";
+    grid-template-rows: repeat (auto-fit, minmax(1px, 1fr));
+  	min-width: 550px;
+    grid-row-gap: 15px;
+    justify-self: center;
+}
+.login-title{
+    grid-area: login-title;
+    margin: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+.login-go-registration, .login-go-registration:hover, .login-go-registration:active{
+    grid-area: login-go-registration;
+    margin: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #614BF2;
+}
+.login-form{
+    grid-area: login-form;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "login-form-input-login"
+        "login-form-input-password"
+        "login-form-button-block";
+    grid-template-rows: repeat (auto-fit, minmax(36px, 1fr));
+    grid-row-gap: 15px;
+    justify-self: center;
+}
+.login-form-label{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+.login-form-input-login{
+    grid-area: login-form-input-login;
+    width: 550px;
+    height: 58px;
+}
+.login-form-input-password{
+    grid-area: login-form-input-password;
+    width: 550px;
+    height: 58px;
+}
+.login-form-button-block{
+    grid-area: login-form-button-block;
+    width: 150px;
+    height: 36px;
+    justify-self: center;
+}
+.login-form-button{
+    width: 150px;
+    height: 36px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    background: #614BF2;
+    border: 2px solid #000000;
+    cursor: pointer;
+}
+.login-form-input{
+    width: 550px;
+    height: 36px;
+    border: 2px solid #000000;
+    padding: 0 15px;
+}
+.page-footer{
+    grid-area: footer;
+    justify-self: center;
+}

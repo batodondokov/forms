@@ -1,0 +1,182 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr 1180px 1fr;
+    grid-template-areas: 
+        ". header ."
+        ". content ."
+        "footer footer footer";
+    grid-template-rows: 100px 1fr 100px;
+    grid-column-gap: 0px;
+    align-items: center;
+    font-family: 'Inter',sans-serif;
+    color: black;
+    margin: 0;
+}
+.page-header{
+    grid-area: header;
+}
+.page-header-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #614BF2;
+}
+.main-content{
+    grid-area: content;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    justify-self: center;
+    min-height: 510px;
+}
+.taskUpdate-block{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "taskUpdate-title"
+        "taskUpdate-go-back"
+        "taskUpdate-errors"
+        "taskUpdate-form";
+    grid-template-rows: repeat (auto-fit, minmax(1px, 1fr));
+    grid-row-gap: 15px;
+    justify-self: center;
+    min-width: 550px;
+}
+.taskUpdate-title{
+    grid-area: taskUpdate-title;
+    margin: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+.taskUpdate-form{
+    grid-area: taskUpdate-form;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "taskUpdate-form-input-topic-block"
+        "taskUpdate-form-select-type-block"
+        "taskUpdate-form-input-place-block"
+        "taskUpdate-form-datetime-block"
+        "taskUpdate-form-select-duration-block"
+        "taskUpdate-form-textarea-block"
+        "taskUpdate-form-select-status-block"
+        "taskUpdate-form-button-block";
+    grid-template-rows: repeat (auto-fit, minmax(36px, 1fr));
+    grid-row-gap: 15px;
+    justify-self: center;
+}
+.taskUpdate-form-label, .taskUpdate-succsess-p{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+.taskUpdate-form-input-topic-block{
+    grid-area: taskUpdate-form-input-topic-block;
+    width: 550px;
+    height: 58px;
+}
+.taskUpdate-form-select-type-block{
+    grid-area: taskUpdate-form-select-type-block;
+    width: 250px;
+    height: 58px;
+}
+.taskUpdate-form-input-place-block{
+    grid-area: taskUpdate-form-input-place-block;
+    width: 550px;
+    height: 58px;
+}
+.taskUpdate-form-datetime-block{
+    grid-area: taskUpdate-form-datetime-block;
+    width: 405px;
+    height: 58px;
+}
+.taskUpdate-form-select-duration-block{
+    grid-area: taskUpdate-form-select-duration-block;
+    width: 250px;
+    height: 58px;
+}
+.taskUpdate-form-textarea-block{
+    grid-area: taskUpdate-form-textarea-block;
+    width: 550px;
+    height: 100px;
+}
+.taskUpdate-form-select-status-block{
+    grid-area: taskUpdate-form-select-status-block;
+    width: 250px;
+    height: 58px;
+}
+.taskUpdate-form-button-block{
+    grid-area: taskUpdate-form-button-block;
+    width: 150px;
+    height: 36px;
+    justify-self: center;
+}
+.taskUpdate-form-input{
+    width: 550px;
+    height: 36px;
+    border: 2px solid #000000;
+    padding: 0 15px;
+}
+.taskUpdate-form-datetime-inputs{
+    width: 405px;
+    height: 36px;
+}
+.taskUpdate-form-input-date{
+    width: 250px;
+    height: 36px;
+    border: 2px solid #000000;
+    padding: 0 15px;
+}
+.taskUpdate-form-input-time, .tasks-list-sorting-date{
+    width: 150px;
+    height: 36px;
+    border: 2px solid #000000;
+    padding: 0 15px;
+}
+.taskUpdate-form-textarea{
+    width: 550px;
+    height: 82px;
+    border: 2px solid #000000;
+    padding: 8px 15px;
+}
+.taskUpdate-form-button{
+    width: 150px;
+    height: 36px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    background: #614BF2;
+    border: 2px solid #000000;
+    cursor: pointer;
+}
+.taskUpdate-form-select{
+    width: 250px;
+    height: 36px;
+    border: 2px solid #000000;
+    padding: 0 15px;
+}
+.taskUpdate-go-back{
+    grid-area: taskUpdate-go-back;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #614BF2;
+}
+.page-footer{
+    grid-area: footer;
+    justify-self: center;
+}

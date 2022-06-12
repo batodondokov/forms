@@ -1,0 +1,369 @@
+/*Cтили для главной страницы*/
+*{
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr 1180px 1fr;
+    grid-template-areas: 
+        ". header ."
+        ". content ."
+        "footer footer footer";
+    grid-template-rows: 100px 1fr 100px;
+    grid-column-gap: 0px;
+    align-items: center;
+    font-family: 'Inter',sans-serif;
+    color: black;
+    margin: 0;
+}
+.page-header{
+    grid-area: header;
+}
+.page-header-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #614BF2;
+}
+.main-content{
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "new-task-and-profile"
+        "tasks-list";
+    grid-template-rows: repeat (auto-fit, minmax(180px, 1fr));
+    grid-row-gap: 30px;
+    min-height: 510px;
+}
+.new-task-and-profile-block{
+    grid-area: new-task-and-profile;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "new-task profile";
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+}
+.new-task-title, .profile-title, .tasks-list-title, .profile-statistics-title, .profile-info-title{
+    margin: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+.new-task-block{
+    grid-area: new-task;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "new-task-title"
+        "new-task-errors"
+        "new-task-form";
+    grid-template-rows: 24px 1fr 516px;
+    grid-row-gap: 15px;
+    border: 2px solid #614BF2;
+    padding: 12px;
+}
+.new-task-succsess-p{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: #614BF2;
+}
+.new-task-succsess-make-another-task{
+    margin: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+.new-task-form-label{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+.new-task-form{
+    grid-area: new-task-form;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "topic"
+        "type"
+        "place"
+        "datetime"
+        "duration"
+        "textarea"
+        "new-task-form-button";
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 100px 36px;
+    grid-row-gap: 15px;
+}
+.new-task-title{
+    grid-area: new-task-title;
+}
+.new-task-form-input-topic-block{
+    grid-area: topic;
+    width: 550px;
+    height: 58px;
+}
+.new-task-form-select-type-block{
+    grid-area: type;
+    width: 250px;
+    height: 58px;
+}
+.new-task-form-input-place-block{
+    grid-area: place;
+    width: 550px;
+    height: 58px;
+}
+.new-task-form-datetime-block{
+    grid-area: datetime;
+    width: 405px;
+    height: 58px;
+}
+.new-task-form-select-duration-block{
+    grid-area: duration;
+    width: 250px;
+    height: 58px;
+}
+.new-task-form-textarea-block{
+    grid-area: textarea;
+    width: 550px;
+    height: 100px;
+}
+.new-task-form-button-block{
+    grid-area: new-task-form-button;
+    width: 150px;
+    height: 36px;
+}
+.new-task-form-input{
+    width: 550px;
+    height: 36px;
+    border: 2px solid #000000;
+    padding: 0 15px;
+}
+.new-task-form-select, .tasks-list-sorting-select{
+    width: 250px;
+    height: 36px;
+    border: 2px solid #000000;
+    padding: 0 15px;
+}
+.new-task-form-datetime-inputs{
+    width: 405px;
+    height: 36px;
+}
+.new-task-form-input-date{
+    width: 250px;
+    height: 36px;
+    border: 2px solid #000000;
+    padding: 0 15px;
+}
+.new-task-form-input-time, .tasks-list-sorting-date{
+    width: 150px;
+    height: 36px;
+    border: 2px solid #000000;
+    padding: 0 15px;
+}
+.new-task-form-textarea{
+    width: 550px;
+    height: 82px;
+    border: 2px solid #000000;
+    padding: 8px 15px;
+}
+.new-task-form-button, .profile-edit-button, .profile-exit-button, .tasks-list-table-button{
+    width: 150px;
+    height: 36px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    background: #614BF2;
+    border: 2px solid #000000;
+    cursor: pointer;
+}
+.profile-block{
+    grid-area: profile;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "profile-title"
+        "user-name"
+        "profile-statistics-block"
+        "profile-info-block"
+        "profile-buttons";
+    grid-template-rows: repeat (auto-fit, minmax(24px, 1fr));
+    grid-row-gap: 15px;
+    border: 2px solid #614BF2;
+    padding: 13px;
+}
+.profile-title{
+    grid-area: profile-title;
+}
+.profile-p-user-name{
+    grid-area: user-name;
+    width: 275px;
+    margin: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #614BF2;
+}
+.profile-statistics-ul, .profile-info-ul{
+    margin: 15px 0 0 0;
+}
+.profile-statistics-li, .profile-info-li{
+    margin: 7px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+}
+.profile-statistics-block{
+    grid-area: profile-statistics-block;
+}
+.profile-info-block{
+    grid-area: profile-info-block;
+}
+.profile-buttons{
+    grid-area: profile-buttons;
+  	display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-areas: 
+        "profile-edit-button . profile-button-form-logout";
+    grid-template-rows: 1fr;
+    grid-column-gap: 15px;
+  	
+}
+.profile-edit-button{
+  	grid-area: profile-edit-button;
+}
+.profile-button-form-logout{
+  	grid-area: profile-button-form-logout;
+    width: 150px;
+    height: 36px;
+}
+.tasks-list-block{
+    grid-area: tasks-list;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "tasks-list-title"
+        "tasks-list-sorting-block"
+        "tasks-list-table-block";
+    grid-template-rows: 24px 36px 1fr;
+    grid-row-gap: 15px;
+    border: 2px solid #614BF2;
+    padding: 13px;
+}
+.tasks-list-title{
+    grid-area: tasks-list-title;
+}
+.tasks-list-sorting-block{
+    grid-area: tasks-list-sorting-block;
+    display: grid;
+    grid-template-columns: 405px 1fr 150px;
+    grid-template-areas: 
+        "tasks-list-sorting . tasks-list-sorting-button-block";
+    grid-template-rows: 1fr;
+}
+.tasks-list-sorting{
+    grid-area: tasks-list-sorting;
+}
+.tasks-list-sorting-button-block{
+    grid-area: tasks-list-sorting-button-block;
+
+}
+.tasks-list-sorting-button{
+    width: 150px;
+    height: 36px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    background: #a2a2a3;
+    border: 2px solid #000000;
+    cursor: pointer;
+}
+.tasks-list-table-block{
+    grid-area: tasks-list-table-block;
+}
+.tasks-list-table-form{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "tasks-list-table"
+        "tasks-list-table-buttons-block";
+    grid-template-rows: 1fr 36px;
+    grid-row-gap: 15px;
+}
+.tasks-list-sorting-period-today{
+    grid-area: today;
+    cursor: pointer;
+}
+.tasks-list-sorting-period-tomorrow{
+    grid-area: tomorrow;
+    cursor: pointer;
+}
+.tasks-list-sorting-period-current-week{
+    grid-area: current-week;
+    cursor: pointer;
+}
+.tasks-list-sorting-period-next-week{
+    grid-area: next-week;
+    cursor: pointer;
+}
+.tasks-list-table{
+    grid-area: tasks-list-table;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #614BF2;
+    text-align: left;
+    overflow-x: auto;
+}
+thead th:nth-child(1) {
+    width: 2%;
+}
+thead th:nth-child(2) {
+    width: 13%;
+}
+thead th:nth-child(3) {
+    width: 55%;
+}
+thead th:nth-child(4) {
+    width: 15%;
+}
+thead th:nth-child(5) {
+    width: 15%;
+}
+th, td {
+padding: 10px;
+}
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+.tasks-list-table-selected-checkbox{
+    text-align: center;
+    width: 20px;
+    height: 20px;
+}
+tbody tr:nth-child(even) {
+    background-color: rgba(97, 75, 242, 0.3)
+}
+.tasks-list-table-buttons-block{
+    grid-area: tasks-list-table-buttons-block;
+    justify-self: center;
+}
+.page-footer{
+    grid-area: footer;
+    justify-self: center;
+}
