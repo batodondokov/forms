@@ -48,11 +48,6 @@ class Database{
         return static::getPdo()->prepare($sql);
     }
     
-    public static function queryPrepare($result)
-    {
-        return $result->fetchColumn();
-    }
-    
     public static function exec($sql)
     {
         return static::getPdo()->exec($sql);
