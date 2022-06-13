@@ -39,7 +39,7 @@ class Database{
 
     public static function queryOne($sql)
     {
-        $result = static::getPdo()->query($sql)->fetch(PDO::FETCH_ASSOC);
+        $result = static::getPdo()->query($sql)->fetchColumn();
         return $result;
     }
 
