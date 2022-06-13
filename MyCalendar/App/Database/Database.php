@@ -50,7 +50,7 @@ class Database{
     
     public static function queryPrepare($result)
     {
-        return $result->fetchColumn();;
+        return $result->fetchColumn();
     }
     
     public static function exec($sql)
